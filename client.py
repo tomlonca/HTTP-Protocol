@@ -12,5 +12,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
     s.connect((HOST, PORT))  # double parenthesis because .connect() expects a tupple with two arguments, instead as to sepparate args
     s.sendall(MESSAGE)
-    received_message = s.recv(len(MESSAGE))
-    print(received_message.decode())
+    received_message = s.recv(len(MESSAGE)) # fetch response from server
+    print(received_message.decode()) # print response on terminal
